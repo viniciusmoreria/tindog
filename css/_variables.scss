@@ -1,0 +1,27 @@
+// Colors
+
+$colors: (
+  primary: #ff4c68,
+  primary-light: lighten(#ff4c68, 5%),
+  accent: #8f8f8f,
+  bg: #fff,
+  text: #fff
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// Layout
+
+$padding: 7% 15%;
+
+// Mobile Version Function
+
+$mobile: 1028px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
